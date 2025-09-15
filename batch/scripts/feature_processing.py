@@ -25,8 +25,6 @@ def feature_pipeline(energy_data):
 
     return batch_df
 
-
-
 def get_targets(energy_data):
     df_daily = energy_data.resample('D').sum("value")
     
@@ -38,6 +36,3 @@ def get_targets(energy_data):
     targets_df = targets_df.dropna()
 
     return targets_df
-
-
-
